@@ -1,20 +1,34 @@
-# Classic Arcade Game Clone Project
+# Classic Arcade Game
 
 ## Table of Contents
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+- [About the Game](#about-the-game)
+- [Installation](#installation)
+- [Dependencies](#dependencies)
 
-## Instructions
+## <a id="about-the-game">About the Game</a>
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
+This is a 2D game. The player needs to cross terrains of grass and stone to reach water. There will be bugs travelling across the stony path. In order to rreach the water, the player has to evade contact with the bugs. If the player makes contact with any bug, the position of the player would be reset to the initial position of the game.
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+Upon reaching the water, the player completes the game and the game is reset.
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+## <a id="installation">Installation</a>
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+Clone or download the porject.
 
-## Contributing
+If you're cloning it, copy the git link and use command: 
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+```
+git clone https://github.com/Denzilgri/arcade-game.git
+```
+Open the project directory and double click on the index.html file.
+
+OR
+
+Download the porject zip file and unzip it. Go to the unzipped project directory and open index.html.
+
+## <a id="dependencies">Dependencies</a>
+
+The project is a stand-alone project. No internet connection is required. Furthermore, please enable javaScript in your browsers as the website is heavily dependent on it.
+
+Basic support for HTML5 canvas exists on IE 9+, Edge, Safari, Chrome, Opera and Firefox browsers.

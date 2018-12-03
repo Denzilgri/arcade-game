@@ -10,7 +10,13 @@
 
 This is a 2D game. The player needs to cross terrains of grass and stone to reach water. There will be bugs travelling across the stony path. In order to rreach the water, the player has to evade contact with the bugs. If the player makes contact with any bug, the position of the player would be reset to the initial position of the game.
 
+<<<<<<< HEAD
 Upon reaching the water, the player completes the game and the game is reset.
+||||||| merged common ancestors
+Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+=======
+Upon reaching the water, the player completes the game.
+>>>>>>> origin/master
 
 ## <a id="installation">Installation</a>
 

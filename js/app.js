@@ -18,7 +18,21 @@ Enemy.prototype.update = function (dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.velocity * dt;
+    this.x += this.velocity * dt;
+
+    if (this.x > 550) {
+        this.velocity = Math.floor(Math.random() * 600);
+        this.x = -100;
+    }
+
+    // update positions of player and enemies upon colisions
+    if (player.x < this.x + 60 &&
+        player.x + 37 > this.x &&
+        player.y < this.y + 25 &&
+        player.y + 30 > this.y) {
+        player.x = 200;
+        player.y = 380;
+    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -40,7 +54,6 @@ var Player = function (x, y) {
 };
 
 // Update the player's position, required method for game
-// Parameter: dt, a time delta between ticks
 Player.prototype.update = function () {
     // If x is less than 0 or to the left of canvas
     if (this.x < 0) {
@@ -52,7 +65,8 @@ Player.prototype.update = function () {
         this.x = 400;
     }
 
-    // If y is at the top of canvas
+    // If y is at the top of canvas, reset the position
+    // as it was at the start of the game.
     if (this.y < 0) {
         this.y = 380;
         this.x = 200;
@@ -92,6 +106,12 @@ Player.prototype.handleInput = function (key) {
 // Placing the player object in a variable called player
 var allEnemies = [];
 var player = new Player(200, 380);
+var enemyPos = [60, 140, 220];
+// Setting up enemies and their positions
+for (var i = 0; i < 3; i++) {
+    var enemy = new Enemy(0, enemyPos[i], Math.floor(Math.random() * 600));
+    allEnemies.push(enemy);
+}
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
